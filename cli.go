@@ -7,10 +7,10 @@ import (
 
 func main() {
 	a := os.Args[1]
-	b := os.Args[2]
+	c := os.Args[2]
 
 	fmt.Println(a)
-	fmt.Println(b)
+	fmt.Println(c)
 }
 
 func help() {
