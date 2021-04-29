@@ -1,4 +1,4 @@
-package bb
+package main
 
 import (
 	"testing"
@@ -10,9 +10,9 @@ func TestTwoSum(t *testing.T) {
 	target := 2
 
 	got := twoSum(nums, target)
-	want := make([]int, 0)
+	want := []int{0}
 
-	if got != want {
+	if got != int {
 		t.Errorf("twoSum(nums, target) \n got: %v \n want: \n%v", got, want)
 	}
 }

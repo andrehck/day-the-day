@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-func main() {
+func HealthCheckHandler() {
 	fmt.Println("HTTP BASIC AUTH")
 	http.HandleFunc("/healthcheck", check)
 
@@ -13,6 +13,7 @@ func main() {
 }
 
 func check(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "hello\n")
+	result := `{"alive": true}`
+	fmt.Fprintf(w, result)
 
 }
