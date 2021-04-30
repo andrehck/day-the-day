@@ -9,5 +9,9 @@ func main() {
 }
 
 func Ola(nome string) string {
+	if nome == "" {
+		nome = "mundo"
+	}
 	return ola + nome
+
 }
