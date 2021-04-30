@@ -12,7 +12,7 @@ func TestAdicionador(t *testing.T) {
 }
 
 func TestAdicionadorPassString(t *testing.T) {
-	soma := Adiciona("teste", 2)
+	soma := Adiciona(2, 2)
 	esperado := 4
 
 	if soma != esperado {
