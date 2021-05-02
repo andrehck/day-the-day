@@ -1,8 +1,6 @@
 package interacao
 
-const qtdRpt = 5
-
-func Repetir(a string) string {
+func Repetir(a string, qtdRpt int) string {
 	var repeticoes string
 
 	for i := 0; i < qtdRpt; i++ {
