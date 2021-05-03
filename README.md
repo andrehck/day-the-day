@@ -28,3 +28,5 @@
 - [] Sync
 - [x] Benchmark
 - [x] Blank Identifier
+- [x] go test -cover
+- [x] Variadic Functions
