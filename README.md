@@ -12,3 +12,17 @@
 - [x] Escrever a quantidade mínima de código para o teste passar
 - [x] Refatorar
 
+
+### Passos
+
+- [x] Inteiros
+- [x] For
+- [x] Array e Slices
+- [] Estruturas, métodos e interfaces
+- [] Ponteiros e erros
+- [] Maps
+- [] Injeção de dependência
+- [] Mocks
+- [] Concorrência
+- [] Select
+- [] Sync
