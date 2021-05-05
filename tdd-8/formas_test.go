@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"math"
+	"testing"
+)
 
 type Retangulo struct {
 	Largura float64
@@ -34,7 +37,7 @@ func TestArea(t *testing.T) {
 	t.Run("circulos", func(t *testing.T) {
 		circulo := Circulo{10}
 		resultado := circulo.Area()
-		esperado := 314.15
+		esperado := math.Pi * circulo.Raio * circulo.Raio
 
 		if resultado != esperado {
 			t.Errorf("resultado %.2f, esperado %.2f", resultado, esperado)
