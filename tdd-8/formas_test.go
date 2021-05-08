@@ -46,3 +46,5 @@ func TestArea(t *testing.T) {
 	})
 
 }
+
+//continuar na refatoração
