@@ -18,7 +18,7 @@
 - [x] Inteiros
 - [x] For
 - [x] Array e Slices
-- [] Estruturas, métodos e interfaces
+- [x] Estruturas, métodos e interfaces #é muito louco 
 - [] Ponteiros e erros
 - [] Maps
 - [] Injeção de dependência
