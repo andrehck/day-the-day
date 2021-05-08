@@ -1,7 +1,6 @@
 package main
 
 import (
-	"math"
 	"testing"
 )
 
@@ -11,6 +10,10 @@ type Retangulo struct {
 }
 type Circulo struct {
 	Raio float64
+}
+
+type Forma interface {
+	Area() float64
 }
 
 func TestPerimetro(t *testing.T) {
@@ -24,25 +27,24 @@ func TestPerimetro(t *testing.T) {
 }
 
 func TestArea(t *testing.T) {
-	t.Run("retangulos", func(t *testing.T) {
-		retangulo := Retangulo{12.0, 6.0}
-		resultado := retangulo.Area()
-		esperado := 72.0
+	verificaArea := func(t *testing.T, forma Forma, esperado float64) {
+		t.Helper()
+		resultado := forma.Area()
 
 		if resultado != esperado {
 			t.Errorf("resultado %.2f, esperado %.2f", resultado, esperado)
 		}
+	}
+
+	t.Run("retangulos", func(t *testing.T) {
+		retangulo := Retangulo{12.0, 6.0}
+		verificaArea(t, retangulo, 72.0)
+
 	})
 
 	t.Run("circulos", func(t *testing.T) {
 		circulo := Circulo{10}
-		resultado := circulo.Area()
-		esperado := math.Pi * circulo.Raio * circulo.Raio
-
-		if resultado != esperado {
-			t.Errorf("resultado %.2f, esperado %.2f", resultado, esperado)
-		}
-
+		verificaArea(t, circulo, 314.1592653589793)
 	})
 
 }
