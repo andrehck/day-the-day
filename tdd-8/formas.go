@@ -13,3 +13,7 @@ func (r Retangulo) Area() float64 {
 func (c Circulo) Area() float64 {
 	return math.Pi * c.Raio * c.Raio
 }
+
+func (t Triangulo) Area() float64 {
+	return (t.Base * t.Altura) * 0.5
+}
