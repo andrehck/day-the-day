@@ -10,7 +10,7 @@ func TestCarteira(t *testing.T) {
 		resultado := carteira.Saldo()
 
 		if resultado != esperado {
-			t.Errorf("resultado %s, esperado %s", resultado, esperado)
+			t.Errorf("resultado  %s, esperado %s", resultado, esperado)
 		}
 	}
 
