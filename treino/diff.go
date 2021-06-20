@@ -2,16 +2,11 @@ package main
 
 import (
 	"bytes"
-	"fmt"
 	"io/ioutil"
 	"log"
 )
 
-func main() {
-	readfile()
-}
-
-func readfile() {
+func diff() int {
 	file, err := ioutil.ReadFile("teste.txt")
 	file2, err := ioutil.ReadFile("teste2.txt")
 	/*data := make([]byte, 100)
@@ -19,5 +14,7 @@ func readfile() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(bytes.Compare(file, file2))
+	a := (bytes.Compare(file, file2))
+
+	return a
 }
