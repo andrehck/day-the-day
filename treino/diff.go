@@ -6,15 +6,15 @@ import (
 	"log"
 )
 
-func diff() int {
-	file, err := ioutil.ReadFile("teste.txt")
-	file2, err := ioutil.ReadFile("teste2.txt")
+func diff() bool {
+	file, err := ioutil.ReadFile("teste2.txt")
+	file2, err := ioutil.ReadFile("teste.txt")
 	/*data := make([]byte, 100)
 	/*count, err := file.Read(data)*/
 	if err != nil {
 		log.Fatal(err)
 	}
-	a := (bytes.Compare(file, file2))
+	a := (bytes.Equal(file, file2))
 
 	return a
 }
